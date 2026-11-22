@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Campus Lost & Found</h1>
+        <p>Helping lost belongings find their way home.</p>
+    </header>
+
+    <nav>
+        <a href="#items">Browse Items</a>
+        <a href="#report">Report an Item</a>
+        <a href="#claims">My Claims</a>
+    </nav>
+
+    <main>
+
+        <!-- BROWSE ITEMS -->
+        <section id="items">
+            <h2>Browse Lost & Found Items</h2>
+            <div id="itemsList">
+                Loading items...
+            </div>
+        </section>
+
+        <!-- REPORT AN ITEM -->
+        <section id="report">
+            <h2>Report an Item</h2>
+
+            <form id="itemForm">
+
+                <label for="itemName">Item Name</label>
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="Enter item name"
+                    required
+                >
+
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    placeholder="Describe the item"
+                    required
+                ></textarea>
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Books">Books</option>
+                    <option value="Bags">Bags</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Personal Items">Personal Items</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="itemType">Item Type</label>
+                <select id="itemType" required>
+                    <option value="">Select Type</option>
+                    <option value="LOST">Lost</option>
+                    <option value="FOUND">Found</option>
+                </select>
+
+                <label for="location">Location</label>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Where was it lost or found?"
+                    required
+                >
+
+                <button type="submit">Submit Report</button>
+
+            </form>
+        </section>
+
+        <!-- CLAIM AN ITEM -->
+        <section id="claims">
+            <h2>Claim an Item</h2>
+            <p>Enter the name of the item you wish to claim.</p>
+
+            <form id="claimForm">
+
+                <label for="claimItem">Item Name</label>
+                <input
+                    type="text"
+                    id="claimItem"
+                    placeholder="Enter item name"
+                    required
+                >
+
+                <label for="claimDescription">
+                    Claim Explanation
+                </label>
+
+                <textarea
+                    id="claimDescription"
+                    placeholder="Explain why this item belongs to you"
+                    required
+                ></textarea>
+
+                <button type="submit">Submit Claim</button>
+
+            </form>
+
+            <h3>My Submitted Claims</h3>
+
+            <div id="claimsList">
+                <p>Your claims will appear here.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Campus Lost & Found Management System</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
